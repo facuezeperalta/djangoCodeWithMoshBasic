@@ -7,7 +7,7 @@ class Promotion(models.Model):
     discount = models.FloatField()
 class Collection(models.Model):
     title = models.CharField(max_length=255)
-    feature_product = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True,related_name='+') #El + le indica a Django que no cree la relación inversa 
+    feature_product = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True,related_name='+') #El + le indica a Django que no cree la relación inversa.
 
 class Product(models.Model):
     title = models.CharField(max_length=255) #esto se traduce a la base de datos como varchar(255).
